@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('medicines', function (Blueprint $table) {
             $table->id();
+            $table->string("name",255);
+            $table->string("cost",255);
+            $table->string("existence",255);
+            $table->string("laboratory",255);
+            $table->string("active_principle",255);
             $table->timestamps();
         });
     }
