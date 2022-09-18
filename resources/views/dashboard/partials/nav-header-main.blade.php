@@ -12,6 +12,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href={{route('medicines.index')}}>Medicinas</a></li>
+                <li><a class="dropdown-item" href={{route('miscellaneous.index')}}>Misceláneas</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>

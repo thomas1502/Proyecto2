@@ -17,6 +17,9 @@ class MiscellaneousController extends Controller
     public function index()
     {
         //
+        $miscellaneous=Miscellany::orderBy('created_at','desc')->cursorpaginate(5);    
+        /* $posts=Post::get(); */
+        echo view ('dashboard.miscellany.index',['miscellaneous'=>$miscellaneous]);
     }
 
     /**
@@ -53,6 +56,7 @@ class MiscellaneousController extends Controller
     public function show(Miscellany $miscellany)
     {
         //
+        echo view ('dashboard.miscellany.show', ['miscellany' => $miscellany]);
     }
 
     /**
