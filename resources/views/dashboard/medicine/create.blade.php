@@ -19,7 +19,7 @@
     </header>
 
     <main>
-        <form action="{{route('miscellaneous.store')}}" method="post">
+        <form action="{{route('medicines.store')}}" method="post">
             @include('dashboard.partials.sesion-flash-status') 
 
             <div class="container">
@@ -52,8 +52,8 @@
                     </div>
 
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                        <input type="text" name="type" class="input" placeholder="  Tipo" value="{{old('type')}}">      
-                        @error('type')
+                        <input type="text" name="laboratory" class="input" placeholder="  Laboratorio" value="{{old('laboratory')}}">      
+                        @error('laboratory')
                             <small class="text-danger">
                                 {{$message}}
                             </small>   
@@ -61,22 +61,14 @@
                     </div>
 
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                    <textarea name="description" class="txtArea" placeholder="Descripción">{{old('description')}}</textarea>     
-                        @error('description')
+                        <input type="text" name="active_principle" class="input" placeholder="  Principio Activo" value="{{old('active_principle')}}">      
+                        @error('active_principle')
                             <small class="text-danger">
                                 {{$message}}
                             </small>   
-                        @enderror 
+                        @enderror  
                     </div>
 
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <input type="text" name="brand" class="input" placeholder="  Marca" value="{{old('brand')}}">      
-                        @error('brand')
-                            <small class="text-danger">
-                                {{$message}}
-                            </small>   
-                        @enderror
-                    </div>
 
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <button type="submit" class="button btn-form">Enviar</button>  

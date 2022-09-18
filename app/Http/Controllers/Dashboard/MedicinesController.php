@@ -38,6 +38,7 @@ class MedicinesController extends Controller
     public function store(Request $request)
     {
         //
+        
     }
 
     /**
