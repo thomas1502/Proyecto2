@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use App\Models\Medicine;
+use App\Http\Requests\StoreMedicinesPost;
 use Illuminate\Http\Request;
 
 class MedicinesController extends Controller
@@ -35,10 +36,13 @@ class MedicinesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreMedicinesPost $request)
     {
         //
-        
+        echo "El titulo trae: ".$request->name;
+        Medicine::create($request->validated());
+        return back()->with('status','Muchas gracias, tu post fue creado con éxito');
+
     }
 
     /**
