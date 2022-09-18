@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreMiscellaneousPost;
 use App\Models\Miscellany;
 use Illuminate\Http\Request;
 
@@ -25,6 +26,7 @@ class MiscellaneousController extends Controller
      */
     public function create()
     {
+        echo view ('dashboard.miscellany.create');
         //
     }
 
@@ -34,9 +36,12 @@ class MiscellaneousController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreMiscellaneousPost $request)
     {
-        //
+        echo "El titulo trae: ".$request->name;
+
+        Miscellany::create($request->validated());
+        return back()->with('status','Muchas gracias, tu post fue creado con éxito');
     }
 
     /**
