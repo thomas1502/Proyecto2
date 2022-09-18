@@ -26,6 +26,7 @@ class MedicinesController extends Controller
     public function create()
     {
         //
+        echo view ('dashboard.medicines.create');
     }
 
     /**
