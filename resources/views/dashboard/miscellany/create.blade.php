@@ -15,7 +15,7 @@
 </head>
 <body>
     <header>
-       
+        @include('dashboard.partials.nav-header-main')
         <div class="titulo">INGRESO DE MISCELÁNEA</div>
     </header>
 

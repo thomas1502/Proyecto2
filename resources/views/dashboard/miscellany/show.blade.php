@@ -15,7 +15,7 @@
 </head>
 <body>
     <header>
-       
+        @include('dashboard.partials.nav-header-main')
         <div class="titulo">INGRESO DE MISCELÁNEA</div>
     </header>
 
@@ -62,7 +62,7 @@
                     </div>
 
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                    <textarea name="description" class="txtArea" placeholder="Descripción" readonly>{$miscellany->description}</textarea>     
+                    <textarea name="description" class="txtArea" placeholder="Descripción" readonly>{{$miscellany->description}}</textarea>     
                         @error('description')
                             <small class="text-danger">
                                 {{$message}}
@@ -78,10 +78,6 @@
                             </small>   
                         @enderror
                     </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <button type="submit" class="button btn-form">Enviar</button>  
-                    </div> 
                 </section>
             </div>
         </form>

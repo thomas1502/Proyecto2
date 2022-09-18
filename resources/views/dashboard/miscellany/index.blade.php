@@ -14,12 +14,15 @@
     <title>TABLA MISCELÁNEA</title>
 </head>
 <body>
-    <header >
+    <header>
         @include('dashboard.partials.nav-header-main')
-        <a class="btn btn-primary" href="{{route('miscellaneous.create')}}">Crear</a>
+        <div class="btn-index">
+            <a class="btn btn-success" href="{{route('miscellaneous.create')}}">Crear</a> 
+        </div>               
     </header>    
 
     <main>
+        <br>
         <div class="container">
             <table class="table table-striped">
                 <thead>
@@ -45,6 +48,9 @@
                             </td>
                             <td>
                                 Marca
+                            </td>
+                            <td>
+                                Creación
                             </td>
                             <td>
                                 Actualizado
@@ -86,6 +92,8 @@
                             </td>
                             <td>
                                 <a href="{{route('miscellaneous.show', $miscellany->id)}}" class="btn btn-primary">Ver</a>
+                                <a href="#" class="btn btn-secondary">Editar</a>
+                                <a href="#" class="btn btn-danger">Eliminar</a>
                             </td>
                         </tr>
                     @endforeach
