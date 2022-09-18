@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::resource('miscellaneous', MiscellaneousController::class);
 Route::resource('medicines', MedicinesController::class);

@@ -15,6 +15,7 @@
 </head>
 <body>
     <header>
+       
         <div class="titulo">INGRESO DE MISCELÁNEA</div>
     </header>
 

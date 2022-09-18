@@ -16,7 +16,9 @@ class MedicinesController extends Controller
      */
     public function index()
     {
-        //
+        $medicines=Medicine::orderBy('created_at','desc')->cursorpaginate(5);    
+        /* $posts=Post::get(); */
+        echo view ('dashboard.medicine.index',['medicines'=>$medicines]);
     }
 
     /**
@@ -27,7 +29,7 @@ class MedicinesController extends Controller
     public function create()
     {
         //
-        echo view ('dashboard.medicines.create');
+        echo view ('dashboard.medicine.create');
     }
 
     /**
@@ -53,7 +55,7 @@ class MedicinesController extends Controller
      */
     public function show(Medicine $medicine)
     {
-        //
+        echo view ('dashboard.medicine.show', ['medicine' => $medicine]);
     }
 
     /**
