@@ -14,19 +14,19 @@
     <title>Miscelánea</title>
 </head>
 <body>
-    <header>
+    <header>        
         @include('dashboard.partials.nav-header-main')
-        <div class="titulo">INGRESO DE MISCELÁNEA</div>
+        <div class="titulo">DETALLE PRODUCTO</div>
     </header>
 
     <main>
-        <form action="{{route('miscellaneous.store')}}" method="post">
-            @include('dashboard.partials.sesion-flash-status') 
+        <form action="{{route('mix.store')}}" method="post">
+            @csrf
 
             <div class="container">
                 <section class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                        <input type="text" name="name" class="input" placeholder="  Nombre" value="{{old('name')}}">      
+                        <input type="text" name="name" class="input" placeholder="  Nombre" value="{{$mixx->name}}" readonly>      
                         @error('name')
                             <small class="text-danger">
                                 {{$message}}
@@ -35,7 +35,7 @@
                     </div>
 
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                        <input type="text" name="cost" class="input" placeholder="  Costo" value="{{old('cost')}}">      
+                        <input type="text" name="cost" class="input" placeholder="  Costo" value="{{$mixx->cost}}" readonly>      
                         @error('cost')
                             <small class="text-danger">
                                 {{$message}}
@@ -44,7 +44,7 @@
                     </div>
 
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                        <input type="text" name="existence" class="input" placeholder="  Existencia" value="{{old('existence')}}">      
+                        <input type="text" name="existence" class="input" placeholder="  Existencia" value="{{$mixx->existence}}" readonly>      
                         @error('existence')
                             <small class="text-danger">
                                 {{$message}}
@@ -53,7 +53,7 @@
                     </div>
 
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                        <input type="text" name="type" class="input" placeholder="  Tipo" value="{{old('type')}}">      
+                        <input type="text" name="type" class="input" placeholder="  Tipo" value="{{$mixx->type}}" readonly>      
                         @error('type')
                             <small class="text-danger">
                                 {{$message}}
@@ -62,26 +62,23 @@
                     </div>
 
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                    <textarea name="description" class="txtArea" placeholder="Descripción">{{old('description')}}</textarea>     
+                        <!-- <label for="">Contenido</label> -->
+                        <textarea name="description" class="txtArea" placeholder="Descripción" readonly>{{$mixx->description}}</textarea>   
                         @error('description')
                             <small class="text-danger">
                                 {{$message}}
                             </small>   
                         @enderror 
-                    </div>
+                    </div>      
 
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                        <input type="text" name="brand" class="input" placeholder="  Marca" value="{{old('brand')}}">      
+                        <input type="text" name="brand" class="input" placeholder=" Marca" value="{{$mixx->brand}}" readonly>      
                         @error('brand')
                             <small class="text-danger">
                                 {{$message}}
                             </small>   
-                        @enderror
+                        @enderror  
                     </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <button type="submit" class="button btn-form">Enviar</button>  
-                    </div> 
                 </section>
             </div>
         </form>

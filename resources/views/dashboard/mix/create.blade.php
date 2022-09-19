@@ -14,19 +14,19 @@
     <title>Miscelánea</title>
 </head>
 <body>
-    <header>
+    <header>        
         @include('dashboard.partials.nav-header-main')
-        <div class="titulo">INGRESO DE MISCELÁNEA</div>
+        <div class="titulo">INGRESO DE MISCELÁNEAS</div>
     </header>
 
     <main>
-        <form action="{{route('miscellaneous.store')}}" method="post">
-            @csrf
+        <form action="{{route('mix.store')}}" method="post">
+            @include('dashboard.partials.sesion-flash-status') 
 
             <div class="container">
                 <section class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                        <input type="text" name="name" class="input" placeholder="  Nombre" value="{{$miscellany->name}}" readonly>      
+                        <input type="text" name="name" class="input" placeholder="  Nombre" value="{{old('name')}}">      
                         @error('name')
                             <small class="text-danger">
                                 {{$message}}
@@ -35,7 +35,7 @@
                     </div>
 
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                        <input type="text" name="cost" class="input" placeholder="  Costo" value="{{$miscellany->cost}}" readonly>      
+                        <input type="text" name="cost" class="input" placeholder="  Costo" value="{{old('cost')}}">      
                         @error('cost')
                             <small class="text-danger">
                                 {{$message}}
@@ -44,7 +44,7 @@
                     </div>
 
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                        <input type="text" name="existence" class="input" placeholder="  Existencia" value="{{$miscellany->existence}}" readonly>      
+                        <input type="text" name="existence" class="input" placeholder="  Existencia" value="{{old('existence')}}">      
                         @error('existence')
                             <small class="text-danger">
                                 {{$message}}
@@ -53,7 +53,7 @@
                     </div>
 
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                        <input type="text" name="type" class="input" placeholder="  Tipo" value="{{$miscellany->type}}" readonly>      
+                        <input type="text" name="type" class="input" placeholder="  Tipo" value="{{old('type')}}">      
                         @error('type')
                             <small class="text-danger">
                                 {{$message}}
@@ -62,22 +62,28 @@
                     </div>
 
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                    <textarea name="description" class="txtArea" placeholder="Descripción" readonly>{{$miscellany->description}}</textarea>     
+                        <!-- <label for="">Contenido</label> -->
+                        <textarea name="description" class="txtArea" placeholder="Descripción">{{old('description')}}</textarea>   
                         @error('description')
                             <small class="text-danger">
                                 {{$message}}
                             </small>   
                         @enderror 
-                    </div>
+                    </div>      
 
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                        <input type="text" name="brand" class="input" placeholder="  Marca" value="{{$miscellany->brand}}" readonly>      
+                        <input type="text" name="brand" class="input" placeholder=" Marca" value="{{old('brand')}}">      
                         @error('brand')
                             <small class="text-danger">
                                 {{$message}}
                             </small>   
-                        @enderror
+                        @enderror  
                     </div>
+
+
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <button type="submit" class="button btn-form">Enviar</button>  
+                    </div> 
                 </section>
             </div>
         </form>

@@ -16,7 +16,7 @@
 <body>
     <header>        
         @include('dashboard.partials.nav-header-main')
-        <div class="titulo">INGRESO DE MEDICINAS</div>
+        <div class="titulo">DETALLE MEDICINA</div>
     </header>
 
     <main>

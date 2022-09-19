@@ -11,14 +11,14 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
 
-    <title>TABLA MISCELÁNEA</title>
+    <title>TABLA MISCELÁNEAS</title>
 </head>
 <body>
-    <header>
+    <header >
         @include('dashboard.partials.nav-header-main')
         <div class="btn-index">
-            <a class="btn btn-success" href="{{route('miscellaneous.create')}}">Crear</a> 
-        </div>               
+            <a class="btn btn-success" href="{{route('mix.create')}}">Crear</a>
+        </div>        
     </header>    
 
     <main>
@@ -44,7 +44,7 @@
                                 Tipo
                             </td>
                             <td>
-                                Descripción
+                                Descripcion
                             </td>
                             <td>
                                 Marca
@@ -61,45 +61,45 @@
                         </tr>
                     </tbody>
 
-                    @foreach($miscellaneous as $miscellany)
+                    @foreach($mixes as $mixx)
                         <tr>
                             <td>
-                                {{$miscellany->id}}
+                                {{$mixx->id}}
                             </td>
                             <td>
-                                {{$miscellany->name}}
+                                {{$mixx->name}}
                             </td>
                             <td>
-                                {{$miscellany->cost}}
+                                {{$mixx->cost}}
                             </td>
                             <td>
-                                {{$miscellany->existence}}
+                                {{$mixx->existence}}
                             </td>
                             <td>
-                                {{$miscellany->type}}
+                                {{$mixx->type}}
                             </td>
                             <td>
-                                {{$miscellany->description}}
+                                {{$mixx->description}}
                             </td>
                             <td>
-                                {{$miscellany->brand}}
+                                {{$mixx->brand}}
                             </td>
                             <td>
-                                {{$miscellany->created_at->format('d-m-Y')}}
+                                {{$mixx->created_at->format('d-m-Y')}}
                             </td>
                             <td>
-                                {{$miscellany->updated_at->format('d-m-Y')}}
+                                {{$mixx->updated_at->format('d-m-Y')}}
                             </td>
                             <td>
-                                <a href="{{route('miscellaneous.show', $miscellany->id)}}" class="btn btn-primary">Ver</a>
-                                <a href="#" class="btn btn-secondary">Editar</a>
+                                <a href="{{route('mix.show', $mixx->id)}}" class="btn btn-primary">Ver</a>
+                                <a href="#" class="btn btn-secondary">Editar</a> 
                                 <a href="#" class="btn btn-danger">Eliminar</a>
                             </td>
                         </tr>
                     @endforeach
                 </thead>                
             </table>  
-            {{$miscellaneous->links()}}        
+            {{$mixes->links()}}        
         </div>
     </main>
 </body>

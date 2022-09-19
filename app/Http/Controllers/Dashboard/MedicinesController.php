@@ -44,7 +44,6 @@ class MedicinesController extends Controller
         echo "El titulo trae: ".$request->name;
         Medicine::create($request->validated());
         return back()->with('status','Muchas gracias, tu post fue creado con éxito');
-
     }
 
     /**
@@ -66,7 +65,7 @@ class MedicinesController extends Controller
      */
     public function edit(Medicine $medicine)
     {
-        //
+        
     }
 
     /**
@@ -78,7 +77,7 @@ class MedicinesController extends Controller
      */
     public function update(Request $request, Medicine $medicine)
     {
-        //
+
     }
 
     /**
@@ -89,6 +88,6 @@ class MedicinesController extends Controller
      */
     public function destroy(Medicine $medicine)
     {
-        //
+
     }
 }

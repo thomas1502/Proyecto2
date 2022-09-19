@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreMiscellaneousPost;
-use App\Models\Miscellany;
+use App\Models\Mix;
+use App\Http\Requests\StoreMixPost;
 use Illuminate\Http\Request;
 
-class MiscellaneousController extends Controller
+class MixController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +17,9 @@ class MiscellaneousController extends Controller
     public function index()
     {
         //
-        $miscellaneous=Miscellany::orderBy('created_at','desc')->cursorpaginate(5);    
+        $mixes=Mix::orderBy('created_at','desc')->cursorpaginate(5);    
         /* $posts=Post::get(); */
-        echo view ('dashboard.miscellany.index',['miscellaneous'=>$miscellaneous]);
+        echo view ('dashboard.mix.index',['mixes'=>$mixes]);
     }
 
     /**
@@ -29,8 +29,8 @@ class MiscellaneousController extends Controller
      */
     public function create()
     {
-        echo view ('dashboard.miscellany.create');
         //
+        echo view ('dashboard.mix.create');
     }
 
     /**
@@ -39,33 +39,30 @@ class MiscellaneousController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreMiscellaneousPost $request)
+    public function store(StoreMixPost $request)
     {
-        echo "El titulo trae: ".$request->name;
-
-        Miscellany::create($request->validated());
+        Mix::create($request->validated());
         return back()->with('status','Muchas gracias, tu post fue creado con éxito');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Miscellany  $miscellany
+     * @param  \App\Models\Mix  $mix
      * @return \Illuminate\Http\Response
      */
-    public function show(Miscellany $miscellany)
+    public function show(Mix $mix)
     {
-        //
-        echo view ('dashboard.miscellany.show', ['miscellany' => $miscellany]);
+        echo view ('dashboard.mix.show', ['mixx' => $mix]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Miscellany  $miscellany
+     * @param  \App\Models\Mix  $mix
      * @return \Illuminate\Http\Response
      */
-    public function edit(Miscellany $miscellany)
+    public function edit(Mix $mix)
     {
         //
     }
@@ -74,10 +71,10 @@ class MiscellaneousController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Miscellany  $miscellany
+     * @param  \App\Models\Mix  $mix
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Miscellany $miscellany)
+    public function update(Request $request, Mix $mix)
     {
         //
     }
@@ -85,10 +82,10 @@ class MiscellaneousController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Miscellany  $miscellany
+     * @param  \App\Models\Mix  $mix
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Miscellany $miscellany)
+    public function destroy(Mix $mix)
     {
         //
     }

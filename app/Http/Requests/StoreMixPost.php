@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreMiscellaneousPost extends FormRequest
+class StoreMixPost extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -29,7 +29,7 @@ class StoreMiscellaneousPost extends FormRequest
             'existence' => 'required|min:1|max:1000',
             'type' => 'required|min:1|max:500',
             'description' => 'required|min:1|max:1000',
-            'brand' => 'required|max:100'
+            'brand' => 'required|min:1|max:500'
         ];
     }
 }

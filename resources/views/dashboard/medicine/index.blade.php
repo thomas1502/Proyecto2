@@ -86,7 +86,7 @@
                             </td>
                             <td>
                                 <a href="{{route('medicines.show', $medicine->id)}}" class="btn btn-primary">Ver</a>
-                                <a href="#" class="btn btn-secondary">Editar</a>
+                                <a href="#" class="btn btn-secondary">Editar</a> 
                                 <a href="#" class="btn btn-danger">Eliminar</a>
                             </td>
                         </tr>

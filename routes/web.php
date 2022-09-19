@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Dashboard\MiscellaneousController;
+use App\Http\Controllers\Dashboard\MixController;
 use App\Http\Controllers\Dashboard\MedicinesController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,5 +19,5 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::resource('miscellaneous', MiscellaneousController::class);
 Route::resource('medicines', MedicinesController::class);
+Route::resource('mix', MixController::class);
