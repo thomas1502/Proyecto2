@@ -29,7 +29,7 @@ class MedicinesController extends Controller
     public function create()
     {
         //
-        echo view ('dashboard.medicine.create');
+        echo view ('dashboard.medicine.create', ['medicine' => new medicine()]);
     }
 
     /**
@@ -65,7 +65,7 @@ class MedicinesController extends Controller
      */
     public function edit(Medicine $medicine)
     {
-        
+        echo view ('dashboard.medicine.edit', ['medicine' => $medicine]);
     }
 
     /**
@@ -75,9 +75,10 @@ class MedicinesController extends Controller
      * @param  \App\Models\Medicine  $medicine
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Medicine $medicine)
+    public function update(StoreMedicinesPost $request, Medicine $medicine)
     {
-
+        $medicine->update($request->validated()); 
+        return back()->with('status','Muchas gracias, tu post fue actualizado con éxito');
     }
 
     /**
@@ -88,6 +89,7 @@ class MedicinesController extends Controller
      */
     public function destroy(Medicine $medicine)
     {
-
+        $medicine->delete();
+        return back()->with('status','POST borrado!');
     }
 }

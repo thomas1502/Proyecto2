@@ -86,8 +86,12 @@
                             </td>
                             <td>
                                 <a href="{{route('medicines.show', $medicine->id)}}" class="btn btn-primary">Ver</a>
-                                <a href="#" class="btn btn-secondary">Editar</a> 
-                                <a href="#" class="btn btn-danger">Eliminar</a>
+                                <a href="{{route('medicines.edit', $medicine->id)}}" class="btn btn-primary">Editar</a>
+                                <form method="POST" action="{{ route('medicines.destroy', $medicine->id) }}">
+                                    @method('DELETE')
+                                    @csrf
+                                    <button class="btn btn-danger" type="submit">Borrar</button>
+                                </form>   
                             </td>
                         </tr>
                     @endforeach
