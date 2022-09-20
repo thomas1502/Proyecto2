@@ -22,7 +22,7 @@
             <li class="nav-item">
                 <!-- <a class="nav-link " href="#">Login<span class="sr-only"></span></a> -->
                 <li>
-                    <a class="nav-link " href="#">Logout<span class="sr-only"></span></a>
+                    <a class="nav-link " href="/login">Logout<span class="sr-only"></span></a> 
                 </li>            
             </li>
         

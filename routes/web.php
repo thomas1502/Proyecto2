@@ -29,7 +29,7 @@ Route::resource('medclient', MedClientController::class);
 Route::resource('mixclient', MixClientController::class);
 
 // Login
-Route::view('login', 'login')->middleware('guest');
+Route::view('login', 'login');
 
 Route::post('login', function() {  
     $credentials = request()->only('email', 'password');
@@ -58,3 +58,10 @@ Route::post('login', function() {
 });
 
 // Logout
+Route::view('logout', 'logout');
+
+Route::get('logout', function(){
+    /* $cookie = Cookie::forget('myCookie');
+    return redirect('/login')->withCookie($cookie); */
+    return redirect('/login');
+});
