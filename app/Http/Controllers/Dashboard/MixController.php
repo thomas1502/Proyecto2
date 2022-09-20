@@ -30,7 +30,7 @@ class MixController extends Controller
     public function create()
     {
         //
-        echo view ('dashboard.mix.create');
+        echo view ('dashboard.mix.create',['mix' => new mix()]);
     }
 
     /**
@@ -65,6 +65,7 @@ class MixController extends Controller
     public function edit(Mix $mix)
     {
         //
+        echo view ('dashboard.mix.edit', ['mix' => $mix]);
     }
 
     /**
@@ -77,6 +78,8 @@ class MixController extends Controller
     public function update(Request $request, Mix $mix)
     {
         //
+        $mix->update($request->validated()); 
+        return back()->with('status','Muchas gracias, tu post fue actualizado con éxito');
     }
 
     /**
@@ -88,5 +91,7 @@ class MixController extends Controller
     public function destroy(Mix $mix)
     {
         //
+        $mix->delete();
+        return back()->with('status','POST borrado!');
     }
 }

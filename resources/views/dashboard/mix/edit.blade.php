@@ -16,11 +16,12 @@
 <body>
     <header>        
         @include('dashboard.partials.nav-header-main')
-        <div class="titulo">INGRESO DE MISCELÁNEAS</div>
+        <div class="titulo">aCTUALIZAR DE MISCELÁNEAS</div>
     </header>
 
     <main>
-        <form action="{{route('mix.store')}}" method="post">
+        <form action="{{route('mix.update',$mix->id)}}" method="post">
+            @method('PUT')
             @include('dashboard.mix._form') 
         </form>
     </main>
