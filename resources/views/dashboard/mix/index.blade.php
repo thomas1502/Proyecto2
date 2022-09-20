@@ -92,8 +92,12 @@
                             </td>
                             <td>
                                 <a href="{{route('mix.show', $mixx->id)}}" class="btn btn-primary">Ver</a>
-                                <a href="#" class="btn btn-secondary">Editar</a> 
-                                <a href="#" class="btn btn-danger">Eliminar</a>
+                                <a href="{{route('mix.edit', $mixx->id)}}" class="btn btn-primary">Editar</a>
+                                <form method="POST" action="{{ route('mix.destroy', $mixx->id) }}">
+                                    @method('DELETE')
+                                    @csrf
+                                    <button class="btn btn-danger" type="submit">Borrar</button>
+                                </form>   
                             </td>
                         </tr>
                     @endforeach
