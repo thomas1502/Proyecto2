@@ -53,7 +53,7 @@ class MixController extends Controller
      */
     public function show(Mix $mix)
     {
-        echo view ('dashboard.mix.show', ['mixx' => $mix]);
+        echo view ('dashboard.mix.show', ['mix' => $mix]);
     }
 
     /**
