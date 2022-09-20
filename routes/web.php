@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Dashboard\MixController;
 use App\Http\Controllers\Dashboard\MedicinesController;
+use App\Http\Controllers\Dashboard\MedClientController;
+use App\Http\Controllers\Dashboard\MixClientController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,7 +25,8 @@ Route::get('/', function () {
 
 Route::resource('medicines', MedicinesController::class);
 Route::resource('mix', MixController::class);
-
+Route::resource('medclient', MedClientController::class);
+Route::resource('mixclient', MixClientController::class);
 
 // Login
 Route::view('login', 'login')->middleware('guest');
@@ -43,7 +46,7 @@ Route::post('login', function() {
         else if($temporal == "pizza")
         {
             request()->session()->regenerate();
-            return redirect('/medicines/create');
+            return redirect('/medclient');
         }
         else
             return redirect('login');

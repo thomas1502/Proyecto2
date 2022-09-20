@@ -15,12 +15,17 @@
 </head>
 <body>
     <header>
-        <h1 style="font-size:30px; text-align:center">LOGIN USUARIO</h1>
+        <div class="titulo">LOGIN USUARIO</div>
     </header>
 
     <main>
+        <br><br><br><br>
         <form method="post">       
             @csrf
+            <div>
+                <img src="Assets/Images/nurse.png" width="15%">
+                <br><br><br>
+            </div>
             <div class="container">
                 <section class="row"> 
                     <div class="col-xs-12 col-sm-12 col-md-12">
