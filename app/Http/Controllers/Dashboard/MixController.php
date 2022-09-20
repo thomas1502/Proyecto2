@@ -53,7 +53,7 @@ class MixController extends Controller
      */
     public function show(Mix $mix)
     {
-        echo view ('dashboard.mix.show', ['mix' => $mix]);
+        echo view ('dashboard.mix.show', ['mixx' => $mix]);
     }
 
     /**
@@ -75,7 +75,7 @@ class MixController extends Controller
      * @param  \App\Models\Mix  $mix
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Mix $mix)
+    public function update(StoreMixPost $request, Mix $mix)
     {
         //
         $mix->update($request->validated()); 

@@ -15,15 +15,31 @@
 </head>
 <body>
     <header>
-
+        <h1 style="font-size:30px; text-align:center">LOGIN USUARIO</h1>
     </header>
 
     <main>
         <form method="post">       
-            @csrf  
-            <input name="email" type="text" placeholder="Correo">
-            <input name="password" type="password" placeholder="Contraseña">
-            <button class="btn btn-success" type="submit">Login</button>
+            @csrf
+            <div class="container">
+                <section class="row"> 
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <input name="email" type="text" placeholder="Correo" class="input-login">
+                    </div>
+                </section>
+
+                <section class="row"> 
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <input name="password" type="password" placeholder="Contraseña" class="input-login">
+                    </div>
+                </section>
+
+                <section class="row"> 
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                    <button class="btn btn-login" type="submit">Login</button>
+                    </div>
+                </section>
+            </div>            
         </form>
     </main>
 
