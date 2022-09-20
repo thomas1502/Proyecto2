@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Dashboard\MixController;
 use App\Http\Controllers\Dashboard\MedicinesController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,20 +24,34 @@ Route::get('/', function () {
 Route::resource('medicines', MedicinesController::class);
 Route::resource('mix', MixController::class);
 
-//
-Route::view('login', 'login')->middleware('guest');
-/* Route::view('dashboard', 'dashboard')->middleware('auth'); */
 
-Route::post('login', function() {
+// Login
+Route::view('login', 'login')->middleware('guest');
+
+Route::post('login', function() {  
     $credentials = request()->only('email', 'password');
+    $temporal = Arr::get($credentials, 'password');
+    echo $temporal;
 
     if (Auth::attempt($credentials))
     {
-        request()->session()->regenerate();
-        return redirect('/medicines/create');
+        if($temporal == "pepian")
+        {
+            request()->session()->regenerate();
+            return redirect('/medicines/create');
+        }    
+        else if($temporal == "pizza")
+        {
+            request()->session()->regenerate();
+            return redirect('/medicines/create');
+        }
+        else
+            return redirect('login');
     }
     else
     {
         return redirect('login');
     }
 });
+
+// Logout

@@ -20,13 +20,13 @@
 
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link " href="#">Login<span class="sr-only"></span></a>
+                <!-- <a class="nav-link " href="#">Login<span class="sr-only"></span></a> -->
                 <li>
                     <a class="nav-link " href="#">Logout<span class="sr-only"></span></a>
                 </li>            
             </li>
         
-            <li class="nav-item dropdown">
+            <!-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Perfil
                 </a>
@@ -36,7 +36,7 @@
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
-            </li>     
+            </li>   -->   
         </ul>
       </div>
     </div>
