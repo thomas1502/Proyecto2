@@ -55,6 +55,7 @@ class RestrictedmedicineController extends Controller
     public function show(Restrictedmedicine $restrictedmedicine)
     {
         //
+        echo view ('dashboard.restrictedmedicine.show', ['restrictedmedicine' => $restrictedmedicine]);
     }
 
     /**
