@@ -21,64 +21,64 @@
 
     <main>
         <form action="{{route('restrictedmedicine.store')}}" method="post">
-            @csrf
-    <div class="container">
-        <section class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <input type="text" name="name" class="input" placeholder="  Nombre" value="{{old( $restrictedmedicine->name)}}" readonly>      
-                @error('name')
-                    <small class="text-danger">
-                        {{$message}}
-                    </small>   
-                @enderror 
-            </div>
+        @csrf
+        <div class="container">
+            <section class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <input type="text" name="name" class="input" placeholder="  Nombre" value="{{$restrictedmedicine->name}}" readonly>      
+                    @error('name')
+                        <small class="text-danger">
+                            {{$message}}
+                        </small>   
+                    @enderror 
+                </div>
 
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <input type="text" name="cost" class="input" placeholder="  Costo" value="{{old($restrictedmedicine->cost)}}" readonly>      
-                @error('cost')
-                    <small class="text-danger">
-                        {{$message}}
-                    </small>   
-                @enderror
-            </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <input type="text" name="cost" class="input" placeholder="  Costo" value="{{$restrictedmedicine->cost}}" readonly>      
+                    @error('cost')
+                        <small class="text-danger">
+                            {{$message}}
+                        </small>   
+                    @enderror
+                </div>
 
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <input type="text" name="existence" class="input" placeholder="  Existencia" value="{{old($restrictedmedicine->existence)}}" readonly>      
-                @error('existence')
-                    <small class="text-danger">
-                        {{$message}}
-                    </small>   
-                @enderror 
-            </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <input type="text" name="existence" class="input" placeholder="  Existencia" value="{{$restrictedmedicine->existence}}" readonly>      
+                    @error('existence')
+                        <small class="text-danger">
+                            {{$message}}
+                        </small>   
+                    @enderror 
+                </div>
 
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <input type="text" name="laboratory" class="input" placeholder="  Laboratorio" value="{{old($restrictedmedicine->laboratory)}}" readonly>      
-                @error('laboratory')
-                    <small class="text-danger">
-                        {{$message}}
-                    </small>   
-                @enderror  
-            </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <input type="text" name="laboratory" class="input" placeholder="  Laboratorio" value="{{$restrictedmedicine->laboratory}}" readonly>      
+                    @error('laboratory')
+                        <small class="text-danger">
+                            {{$message}}
+                        </small>   
+                    @enderror  
+                </div>
 
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <input type="text" name="active_principle" class="input" placeholder="  Principio Activo" value="{{old($restrictedmedicine->active_principle)}}" readonly>      
-                @error('active_principle')
-                    <small class="text-danger">
-                        {{$message}}
-                    </small>   
-                @enderror  
-            </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <input type="text" name="active_principle" class="input" placeholder="  Principio Activo" value="{{$restrictedmedicine->active_principle}}" readonly>      
+                    @error('active_principle')
+                        <small class="text-danger">
+                            {{$message}}
+                        </small>   
+                    @enderror  
+                </div>
 
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <input type="text" name="prescription_code" class="input" placeholder="  Código de Prescripción" value="{{old($restrictedmedicine->prescription_code)}}" readonly>      
-                @error('prescription_code')
-                    <small class="text-danger">
-                        {{$message}}
-                    </small>   
-                @enderror  
-            </div>
-        </section>
-    </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <input type="text" name="prescription_code" class="input" placeholder="  Código de Prescripción" value="{{$restrictedmedicine->prescription_code}}" readonly>      
+                    @error('prescription_code')
+                        <small class="text-danger">
+                            {{$message}}
+                        </small>   
+                    @enderror  
+                </div>
+            </section>
+        </div>
         </form>
     </main>
 </body>

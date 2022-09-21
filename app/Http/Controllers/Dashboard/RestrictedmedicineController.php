@@ -66,7 +66,7 @@ class RestrictedmedicineController extends Controller
      */
     public function edit(Restrictedmedicine $restrictedmedicine)
     {
-        //
+        echo view ('dashboard.restrictedmedicine.edit', ['restrictedmedicine' => $restrictedmedicine]);
     }
 
     /**
@@ -76,9 +76,10 @@ class RestrictedmedicineController extends Controller
      * @param  \App\Models\Restrictedmedicine  $restrictedmedicine
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Restrictedmedicine $restrictedmedicine)
+    public function update(StoreRestrictedMedicinePost $request, Restrictedmedicine $restrictedmedicine)
     {
-        //
+        $restrictedmedicine->update($request->validated()); 
+        return back()->with('status','Muchas gracias, tu post fue actualizado con éxito');
     }
 
     /**
