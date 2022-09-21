@@ -100,8 +100,11 @@ body{
 }
 .fondo{
     height: 400px;
-  background-image: url("https://carontestudio.com/img/caronte-web-estudio-logo.png");
+  background-image: url("Assets/Images/fondo32.jpg");
 background-size: cover;
   background-repeat:no-repeat;
   background-position: center center;
+}
+.titulohome{
+    font-size: 45px;
 }

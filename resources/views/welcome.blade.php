@@ -12,7 +12,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
-<body class="fondo">
-    
+<body >
+    <head>
+    @include('nav-header-main')   
+    </head>
+    <main class="fondo">
+        <p>
+            <h1>FARMACIA AHORRO</h1>
+        </p>
+    </main>
 </body>
 </html>
