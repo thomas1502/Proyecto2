@@ -5,6 +5,7 @@ use App\Http\Controllers\Dashboard\MixController;
 use App\Http\Controllers\Dashboard\MedicinesController;
 use App\Http\Controllers\Dashboard\MedClientController;
 use App\Http\Controllers\Dashboard\MixClientController;
+use App\Http\Controllers\Dashboard\RestrictedmedicineController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,6 +28,7 @@ Route::resource('medicines', MedicinesController::class);
 Route::resource('mix', MixController::class);
 Route::resource('medclient', MedClientController::class);
 Route::resource('mixclient', MixClientController::class);
+Route::resource('restrictedmedicine', RestrictedmedicineController::class);
 
 // Login
 Route::view('login', 'login');
