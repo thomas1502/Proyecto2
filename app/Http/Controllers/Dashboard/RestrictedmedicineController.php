@@ -91,5 +91,7 @@ class RestrictedmedicineController extends Controller
     public function destroy(Restrictedmedicine $restrictedmedicine)
     {
         //
+        $restrictedmedicine->delete();
+        return back()->with('status','POST borrado!');
     }
 }
