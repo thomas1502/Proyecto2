@@ -13,6 +13,7 @@
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href={{route('medicines.index')}}>Medicinas</a></li>
                 <li><a class="dropdown-item" href={{route('mix.index')}}>Miscelánea</a></li>
+                <li><a class="dropdown-item" href={{route('restrictedmedicine.index')}}>Medicinas Restringidas</a></li>
                 <li><hr class="dropdown-divider"></li>
             </ul>
             </li>       
@@ -22,7 +23,7 @@
             <li class="nav-item">
                 <!-- <a class="nav-link " href="#">Login<span class="sr-only"></span></a> -->
                 <li>
-                    <a class="nav-link " href="/login">Logout<span class="sr-only"></span></a>                
+                    <a class="nav-link " href="/login">Logout<span class="sr-only"></span></a> 
                 </li>            
             </li>
         

@@ -15,7 +15,7 @@
 </head>
 <body>
     <header >
-        @include('dashboard.partials.nav-header-main')
+        @include('dashboard.restrictedmedicine.nav-header-main')
         <div class="btn-index">
             <a class="btn btn-success" href="{{route('restrictedmedicine.create')}}">Crear</a>
         </div>        
