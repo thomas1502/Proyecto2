@@ -13,7 +13,7 @@ class StoreRestrictedMedicinePost extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,11 @@ class StoreRestrictedMedicinePost extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|min:5|Max:500',
+            'cost' => 'required|min:1|Max:25',
+            'existence' => 'required|min:1|max:1000',
+            'laboratory' => 'required|min:1|max:500',
+            'active_principle' => 'required|min:1|max:500',
+            'prescription_code' => 'required|min:1|max:500'
         ];
-    }
 }

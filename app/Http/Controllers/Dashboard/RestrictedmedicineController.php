@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Models\Restrictedmedicine;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreRestictedMedicinePost;
 
 class RestrictedmedicineController extends Controller
 {
@@ -26,6 +27,7 @@ class RestrictedmedicineController extends Controller
     public function create()
     {
         //
+        echo view ('dashboard.restrictedmedicine.create', ['restrictedmedicine' => new restrictedmedicine()]);
     }
 
     /**
@@ -34,7 +36,7 @@ class RestrictedmedicineController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreRestictedMedicinePost $request)
     {
         //
         echo "El titulo trae: ".$request->name;
