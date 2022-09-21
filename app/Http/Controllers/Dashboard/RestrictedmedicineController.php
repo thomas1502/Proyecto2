@@ -37,6 +37,9 @@ class RestrictedmedicineController extends Controller
     public function store(Request $request)
     {
         //
+        echo "El titulo trae: ".$request->name;
+        Restrictedmedicine::create($request->validated());
+        return back()->with('status','Muchas gracias, tu post fue creado con éxito');
     }
 
     /**
