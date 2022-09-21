@@ -50,6 +50,11 @@ Route::post('login', function() {
             request()->session()->regenerate();
             return redirect('/medclient');
         }
+        else if($temporal == "Farmacos")
+        {
+            request()->session()->regenerate();
+            return redirect('/restrictedmedicine');
+        }
         else
             return redirect('login');
     }
