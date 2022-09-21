@@ -31,4 +31,5 @@ class StoreRestrictedMedicinePost extends FormRequest
             'active_principle' => 'required|min:1|max:500',
             'prescription_code' => 'required|min:1|max:500'
         ];
+    }
 }

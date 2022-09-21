@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Models\Restrictedmedicine;
 use Illuminate\Http\Request;
-use App\Http\Requests\StoreRestictedMedicinePost;
+use App\Http\Requests\StoreRestrictedMedicinePost;
 
 class RestrictedmedicineController extends Controller
 {
@@ -16,7 +16,9 @@ class RestrictedmedicineController extends Controller
      */
     public function index()
     {
-        //
+        $restrictedm=Restrictedmedicine::orderBy('created_at','desc')->cursorpaginate(5);    
+        /* $posts=Post::get(); */
+        echo view ('dashboard.restrictedmedicine.index',['restrictedm'=>$restrictedm]);
     }
 
     /**
@@ -36,7 +38,7 @@ class RestrictedmedicineController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreRestictedMedicinePost $request)
+    public function store(StoreRestrictedMedicinePost $request)
     {
         //
         echo "El titulo trae: ".$request->name;

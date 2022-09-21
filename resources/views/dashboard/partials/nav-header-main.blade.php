@@ -12,6 +12,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href={{route('medicines.index')}}>Medicinas</a></li>
+                <li><a class="dropdown-item" href={{route('restrictedmedicine.index')}}>Medicinas Restringidas</a></li>
                 <li><a class="dropdown-item" href={{route('mix.index')}}>Miscelánea</a></li>
                 <li><hr class="dropdown-divider"></li>
             </ul>
