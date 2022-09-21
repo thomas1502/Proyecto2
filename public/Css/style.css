@@ -98,19 +98,3 @@ body{
     padding: 10px 10px;
     background-color: black;
 }
-
-/* Clases de Home*/
-.fondo{
-    height: 100px;
-    height: auto;
-    background-image: url("Assets/Images/fondo32.jpg");
-    background-color:black;
-    background-repeat:no-repeat;
-    background-position-x:center;
-    background-position-y:center;
-    background-size: 10rem;
-}
-.titulohome{
-    font-size: 45px;
-    margin-left: 100px;
-}

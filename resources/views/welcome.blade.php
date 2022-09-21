@@ -11,17 +11,37 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
     <title>Inicio</title>
+
+    <!-- Etiqueta para dar estilo -->
+    <style>
+        .fondo{
+            margin-top: 10px;
+            background-image: url("Assets/Images/fondo.jpg");
+            background-attachment: fixed;
+            background-size:cover;  
+            background-repeat: no-repeat;
+
+            height: 800px;
+            width: auto;
+        }
+
+        .titulohome{
+            font-size: 100px;
+            text-align: center;
+            background-color: black;
+        }
+
+        header{
+            background-color: black;
+        }
+    </style>
 </head>
 <body class="fondo">
     <header>
         @include('nav-header-main')
     </header>
     <main>
-        <h1 style="font-size: 100px">FARMACIA AHORRO</h1>
-        <div>
-            <!-- <img src="Assets/Images/fondo32.jpg" width="60%"> -->
-            <br><br><br>
-        </div>
+
     </main>
     <footer>
         
