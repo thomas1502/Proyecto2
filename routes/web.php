@@ -34,7 +34,7 @@ Route::resource('restrictedmedicine', RestrictedmedicineController::class);
 Route::view('login', 'login');
 
 Route::post('login', function() {  
-    $credentials = request()->only('email', 'password');
+    $credentials = request()->only('name', 'password');
     $temporal = Arr::get($credentials, 'password');
     echo $temporal;
 

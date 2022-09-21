@@ -29,7 +29,7 @@
             <div class="container">
                 <section class="row"> 
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                        <input name="email" type="text" placeholder="Correo" class="input-login">
+                        <input name="name" type="text" placeholder="Usuario" class="input-login">
                     </div>
                 </section>
 
