@@ -98,3 +98,10 @@ body{
     padding: 10px 10px;
     background-color: black;
 }
+.fondo{
+    height: 400px;
+  background-image: url("https://carontestudio.com/img/caronte-web-estudio-logo.png");
+background-size: cover;
+  background-repeat:no-repeat;
+  background-position: center center;
+}

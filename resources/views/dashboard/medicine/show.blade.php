@@ -22,7 +22,6 @@
     <main>
         <form action="{{route('medicines.store')}}" method="post">
             @csrf
-
             <div class="container">
                 <section class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
